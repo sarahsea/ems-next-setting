@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 // import "./globals.css";
-import { roboto } from "@/shared/config/muiTheme";
+import { roboto } from "@/shared/app/styles/mui.theme";
 import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
 import AppProvider from "@/shared/app/provider/AppProvider";
 
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.variable} suppressHydrationWarning>
       <body>
-        <InitColorSchemeScript attribute="class" />
+        <InitColorSchemeScript attribute=".mui-theme-%s" />
         <AppProvider>{children}</AppProvider>
       </body>
     </html>
