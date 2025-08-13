@@ -1,7 +1,7 @@
 "use client";
 
 import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
-import { theme } from "@/shared/app/styles/mui.theme";
+import { theme } from "@/app/styles/mui.theme";
 import CssBaseline from "@mui/material/CssBaseline";
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
