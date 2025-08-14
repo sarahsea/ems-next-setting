@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
+
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import moment from "moment-timezone";
+import { getTimezone } from "@/shared/lib/timezone/tz-lookup";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -112,6 +115,18 @@ export const Sites = () => {
         <p>New York Time: {momentNyTime.format("YYYY-MM-DD HH:mm:ss z")}</p>
         <p>Perth Time: {momentPerthTime.format("YYYY-MM-DD HH:mm:ss z")}</p>
       </div>
+      <div>
+        <h4>TZ-lookup</h4>
+        <p>브라슬라바: {getTimezone(48.1482, 17.1067)}</p>
+        <p>서울: {getTimezone(37.608377, 127.00023)}</p>
+        <p>멜버른: {getTimezone(-37.8136, 144.9631)}</p>
+        <p>뉴욕: {getTimezone(40.7128, -74.006)}</p>
+        <p>퍼스: {getTimezone(-31.9505, 115.8605)}</p>
+        <p>런던: {getTimezone(51.5074, -0.1278)}</p>
+        <p>파리: {getTimezone(48.8566, 2.3522)}</p>
+        <br />
+      </div>
+      <br />
     </>
   );
 };
