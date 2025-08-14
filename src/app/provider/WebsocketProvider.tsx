@@ -22,7 +22,11 @@ const WebSocketContext = createContext<WsCtx | null>(null);
 //   return ctx;
 // }
 
-export function WebSocketProvider({ children }: { children: ReactNode }) {
+export default function WebSocketProvider({
+  children,
+}: {
+  children: ReactNode;
+}) {
   const url = process.env.NEXT_PUBLIC_WS_URL ?? 'ws://localhost:3001/ws';
 
   const [status, setStatus] = useState<WsCtx['status']>('idle');

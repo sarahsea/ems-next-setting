@@ -1,3 +1,4 @@
+import LangSelect from '@/app/ui/components/LangSelect';
 import ThemeModeSelect from '@/app/ui/components/ThemeModeSelect';
 import Badge from '@mui/material/Badge';
 import Box from '@mui/material/Box';
@@ -6,6 +7,7 @@ import Slider from '@mui/material/Slider';
 import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
 import ToggleButton from '@mui/material/ToggleButton';
+import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
 const dummyDelayForLoadingTest = async () =>
@@ -15,6 +17,7 @@ const dummyDelayForLoadingTest = async () =>
     }, 2000),
   );
 export const FleetMapPage = async () => {
+  const t = await getTranslations('home');
   await dummyDelayForLoadingTest();
   return (
     <Box
@@ -28,7 +31,9 @@ export const FleetMapPage = async () => {
     >
       <h1>Fleet Map</h1>
       <p>This is the Fleet Map page.</p>
+      <p>{t('title')}</p>
       <ThemeModeSelect />
+      <LangSelect />
       <Stack
         sx={{
           width: '100%',
@@ -45,7 +50,7 @@ export const FleetMapPage = async () => {
       >
         <Slider />
         <Switch />
-        <ToggleButton></ToggleButton>
+        {/* <ToggleButton></ToggleButton> */}
         <Badge />
       </Stack>
     </Box>

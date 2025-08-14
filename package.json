@@ -18,6 +18,7 @@
     "ag-grid-enterprise": "^34.1.1",
     "ag-grid-react": "^34.1.1",
     "next": "15.4.6",
+    "next-intl": "^4.3.4",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
