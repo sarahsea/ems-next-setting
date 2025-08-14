@@ -4,6 +4,7 @@ import AppProvider from '@/app/provider/AppProvider';
 import ClientIntlProvider from '@/app/provider/ClientIntlProvider';
 import { getLocale, getMessages } from 'next-intl/server';
 import type { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
 
 export const metadata: Metadata = {
   title: 'DER-EMS',
@@ -22,8 +23,10 @@ export default async function RootLayout({
     <html lang={locale} className={roboto.variable} suppressHydrationWarning>
       <body>
         <InitColorSchemeScript attribute=".mui-theme-%s" />
-        <ClientIntlProvider initialLocale={locale} initialMessages={messages} />
-        <AppProvider>{children}</AppProvider>
+        {/* <ClientIntlProvider initialLocale={locale} initialMessages={messages} /> */}
+        <NextIntlClientProvider>
+          <AppProvider>{children}</AppProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

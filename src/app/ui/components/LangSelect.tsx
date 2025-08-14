@@ -6,22 +6,24 @@ import { setUserLocale } from '@/service/locale';
 import { Locale } from '@/i18n/config';
 import { useRouter } from 'next/navigation';
 
-export default function LangSelect() {
+type Props = {
+  defaultValue: Locale;
+  locales: Locale[];
+  label?: string;
+};
+
+export default function LocaleSelect({ defaultValue, locales, label }: Props) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
-  const [locale, setLocale] = useState('en');
   const handleChange = (e) => {
     const value = e.target.value;
-    if (value === locale) return; // No change
-    startTransition(async () => {
-      await setUserLocale(value as Locale);
-      setLocale(value);
-      router.refresh();
+    startTransition(() => {
+      setUserLocale(value as Locale);
     });
   };
   return (
     <Select
-      value={locale}
+      value={defaultValue}
       defaultValue="en"
       onChange={handleChange}
       disabled={isPending}
