@@ -1,1 +1,1 @@
-export { FleetMapPage } from "@/views/fleet-map/ui/FleetMap";
+export { FleetMapPage } from '@/views/fleet-map/ui/FleetMap';

@@ -1,8 +1,8 @@
-import { queryOptions, useQuery } from "@tanstack/react-query";
-import { getUserInfo } from "@/entities/user/api/requests";
+import { queryOptions, useQuery } from '@tanstack/react-query';
+import { getUserInfo } from '@/entities/user/api/requests';
 
 export const userInfoQueryOptions = queryOptions({
-  queryKey: ["userInfo"],
+  queryKey: ['userInfo'],
   queryFn: getUserInfo,
 });
 export const useUserInfo = () => {

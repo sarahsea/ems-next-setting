@@ -1,8 +1,8 @@
-"use client";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import { QueryProvider } from "./QueryProvider";
-import { ThemeProvider } from "./ThemeProvider";
-import { WebSocketProvider } from "./WebsocketProvider";
+'use client';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { QueryProvider } from './QueryProvider';
+import { ThemeProvider } from './ThemeProvider';
+import { WebSocketProvider } from './WebsocketProvider';
 
 export default function AppProvider({
   children,

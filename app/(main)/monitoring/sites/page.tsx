@@ -1,5 +1,5 @@
-import { Sites } from "@/views/sites";
-import React from "react";
+import { Sites } from '@/views/sites';
+import React from 'react';
 
 function MonitoringSites() {
   return <Sites />;

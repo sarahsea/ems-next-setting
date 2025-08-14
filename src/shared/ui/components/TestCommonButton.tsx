@@ -1,7 +1,7 @@
-import { Button, ButtonProps } from "@mui/material";
+import { Button, ButtonProps } from '@mui/material';
 
 const TestCommonButton = (
-  props: { children: React.ReactNode } & ButtonProps
+  props: { children: React.ReactNode } & ButtonProps,
 ) => {
   return (
     <Button variant="contained" color="primary" {...props}>

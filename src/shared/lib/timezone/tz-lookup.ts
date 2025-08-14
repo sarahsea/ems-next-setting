@@ -1,5 +1,5 @@
-import tz from "tz-lookup";
+import tz from 'tz-lookup';
 
 export const getTimezone = (latitude: number, longitude: number): string => {
-  return tz(latitude, longitude) || "";
+  return tz(latitude, longitude) || '';
 };

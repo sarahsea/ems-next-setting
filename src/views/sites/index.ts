@@ -1,1 +1,1 @@
-export { Sites } from "@/views/sites/ui/Sites";
+export { Sites } from '@/views/sites/ui/Sites';

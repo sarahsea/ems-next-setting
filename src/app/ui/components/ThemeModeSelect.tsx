@@ -1,11 +1,11 @@
-"use client";
-import { useState } from "react";
-import MenuItem from "@mui/material/MenuItem";
-import Select from "@mui/material/Select";
-import { useColorScheme } from "@mui/material/styles";
+'use client';
+import { useState } from 'react';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import { useColorScheme } from '@mui/material/styles';
 
 function ThemeModeSelect() {
-  const [value, setValue] = useState("system");
+  const [value, setValue] = useState('system');
   const { setMode } = useColorScheme();
   const handleChange = (e) => {
     const value = e.target.value;
