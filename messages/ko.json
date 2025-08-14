@@ -1,5 +1,9 @@
 {
   "home": {
     "title": "안녕하세요"
+  },
+  "LOCALE": {
+    "en": "English",
+    "ko": "한국어"
   }
 }

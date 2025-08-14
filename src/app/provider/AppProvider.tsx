@@ -13,7 +13,9 @@ export default function AppProvider({
     <AppRouterCacheProvider>
       <QueryProvider>
         <ThemeProvider>
-          <WebSocketProvider>{children}</WebSocketProvider>
+          {/* <WebSocketProvider> */}
+          {children}
+          {/* </WebSocketProvider> */}
         </ThemeProvider>
       </QueryProvider>
     </AppRouterCacheProvider>

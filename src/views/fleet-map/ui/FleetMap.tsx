@@ -1,5 +1,7 @@
 import LangSelect from '@/app/ui/components/LangSelect';
 import ThemeModeSelect from '@/app/ui/components/ThemeModeSelect';
+import SegmentedProgressBar from '@/shared/ui/components/SegmentedProgressbar';
+import { Button } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import Box from '@mui/material/Box';
 import Select from '@mui/material/Select';
@@ -33,7 +35,7 @@ export const FleetMapPage = async () => {
       <p>This is the Fleet Map page.</p>
       <p>{t('title')}</p>
       <ThemeModeSelect />
-      <LangSelect />
+
       <Stack
         sx={{
           width: '100%',
@@ -51,7 +53,11 @@ export const FleetMapPage = async () => {
         <Slider />
         <Switch />
         {/* <ToggleButton></ToggleButton> */}
-        <Badge />
+        <Badge variant="dot" color="success" />
+        <Button variant="contained" color="secondary">
+          Click Me
+        </Button>
+        <SegmentedProgressBar label="SOH" value={98.2} color="secondary" />
       </Stack>
     </Box>
   );

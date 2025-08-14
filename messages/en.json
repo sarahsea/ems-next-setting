@@ -1,5 +1,9 @@
 {
   "home": {
     "title": "helloworld"
+  },
+  "LOCALE": {
+    "en": "English",
+    "ko": "한국어"
   }
 }
