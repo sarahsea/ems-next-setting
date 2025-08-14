@@ -1,4 +1,4 @@
-import MainLayout from '@/app/layout/MainLayout';
+import ContentLayout from '@/app/ui/layout/ContentLayout';
 import { getUserInfo } from '@/entities/user/api/requests';
 
 const dummyGetUserMenu = async () => {
@@ -37,12 +37,12 @@ const dummyGetUserMenu = async () => {
   });
 };
 
-export default async function ContentLayout({
+export default async function BaseLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   const userMenu = await dummyGetUserMenu();
 
-  return <MainLayout menu={userMenu.data}>{children}</MainLayout>;
+  return <ContentLayout menu={userMenu.data}>{children}</ContentLayout>;
 }

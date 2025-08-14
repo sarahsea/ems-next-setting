@@ -4,7 +4,7 @@ import Footer from '@/app/ui/components/Footer';
 import Sidebar from '@/app/ui/components/Sidebar';
 import { Suspense } from 'react';
 
-export default function MainLayout({
+export default function ContentLayout({
   menu,
   children,
 }: {
@@ -12,7 +12,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box sx={{ display: 'flex' }}>
       <Header />
       <Sidebar />
       <Suspense fallback={<div>Loading...</div>}>
