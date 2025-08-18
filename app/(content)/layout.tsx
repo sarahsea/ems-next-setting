@@ -1,37 +1,43 @@
 import ContentLayout from '@/app/ui/layout/ContentLayout';
-import { getUserInfo } from '@/entities/user/api/requests';
+// import { getUserInfo } from '@/entities/user/api/requests';
 
 const dummyGetUserMenu = async () => {
   // Simulating a user menu fetch, replace with actual API call
   return Promise.resolve({
     data: [
       {
-        id: 1,
-        pageId: 1,
-        categoryId: 1,
-        categoryName: 'Fleet Map',
+        type: 'item',
+        key: 1,
         name: 'Fleet Map',
+        href: '/fleet-map',
       },
       {
-        id: 2,
-        pageId: 2,
-        categoryId: 2,
-        categoryName: 'Monitoring',
-        name: 'Sites',
+        type: 'group',
+        key: 2,
+        name: 'Monitoring',
+        href: '/monitoring',
+        children: [
+          {
+            type: 'item',
+            key: '2-1',
+            categoryName: 'Monitoring',
+            name: 'Sites',
+            href: '/sites',
+          },
+          {
+            type: 'item',
+            key: '2-2',
+            categoryName: 'Monitoring',
+            name: 'Device',
+            href: '/device',
+          },
+        ],
       },
       {
-        id: 3,
-        pageId: 3,
-        categoryId: 2,
-        categoryName: 'Monitoring',
-        name: 'Devices',
-      },
-      {
-        id: 4,
-        pageId: 4,
-        categoryId: 3,
-        categoryName: 'Alarms',
+        key: 4,
+        type: 'item',
         name: 'Real-time Alarms',
+        href: '/alarms',
       },
     ],
   });
@@ -42,6 +48,7 @@ export default async function BaseLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // 유저정보에 따른 메뉴 가져와야 함
   const userMenu = await dummyGetUserMenu();
 
   return <ContentLayout menu={userMenu.data}>{children}</ContentLayout>;

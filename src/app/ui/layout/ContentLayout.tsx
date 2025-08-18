@@ -1,8 +1,9 @@
-import { Box, Grid } from '@mui/material';
+'use client';
+import { Box } from '@mui/material';
 import Header from '@/app/ui/components/Header';
 import Footer from '@/app/ui/components/Footer';
 import Sidebar from '@/app/ui/components/Sidebar';
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 
 export default function ContentLayout({
   menu,
@@ -11,10 +12,16 @@ export default function ContentLayout({
   menu: any; // Adjust type as necessary
   children: React.ReactNode;
 }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const handleToggleSidebar = () => {
+    setSidebarOpen((prev) => !prev);
+  };
+
   return (
-    <Box sx={{ display: 'flex' }}>
-      <Header />
-      <Sidebar />
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <Header onToggleSidebar={handleToggleSidebar} />
+      <Sidebar menu={menu} open={sidebarOpen} onClose={handleToggleSidebar} />
       <Suspense fallback={<div>Loading...</div>}>
         <Box
           component="main"

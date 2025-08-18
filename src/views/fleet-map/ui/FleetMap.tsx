@@ -1,14 +1,10 @@
-import LangSelect from '@/app/ui/components/LangSelect';
-import ThemeModeSelect from '@/app/ui/components/ThemeModeSelect';
 import SegmentedProgressBar from '@/shared/ui/components/SegmentedProgressbar';
 import { Button } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import Box from '@mui/material/Box';
-import Select from '@mui/material/Select';
 import Slider from '@mui/material/Slider';
 import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
-import ToggleButton from '@mui/material/ToggleButton';
 import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
@@ -34,7 +30,7 @@ export const FleetMapPage = async () => {
       <h1>Fleet Map</h1>
       <p>This is the Fleet Map page.</p>
       <p>{t('title')}</p>
-      <ThemeModeSelect />
+      {/* <ThemeModeSelect /> */}
 
       <Stack
         sx={{
