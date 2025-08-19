@@ -6,26 +6,26 @@ const dummyGetUserMenu = async () => {
   return Promise.resolve({
     data: [
       {
-        type: 'item',
-        key: 1,
+        type: 'item' as const,
+        key: '1',
         name: 'Fleet Map',
-        href: '/fleet-map',
+        href: '/fleetmap',
       },
       {
-        type: 'group',
-        key: 2,
+        type: 'group' as const,
+        key: '2',
         name: 'Monitoring',
         href: '/monitoring',
         children: [
           {
-            type: 'item',
+            type: 'item' as const,
             key: '2-1',
             categoryName: 'Monitoring',
             name: 'Sites',
             href: '/sites',
           },
           {
-            type: 'item',
+            type: 'item' as const,
             key: '2-2',
             categoryName: 'Monitoring',
             name: 'Device',
@@ -34,8 +34,8 @@ const dummyGetUserMenu = async () => {
         ],
       },
       {
-        key: 4,
-        type: 'item',
+        key: '3',
+        type: 'item' as const,
         name: 'Real-time Alarms',
         href: '/alarms',
       },

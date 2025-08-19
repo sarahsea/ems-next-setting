@@ -1,17 +1,19 @@
 import SegmentedProgressBar from '@/shared/ui/components/SegmentedProgressbar';
+import AppIcon from '@/shared/ui/icons/AppIcon';
 import { Button } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
+import App from 'next/dist/pages/_app';
 import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
 const dummyDelayForLoadingTest = async () =>
   new Promise((resolve) =>
     setTimeout(() => {
-      resolve();
+      resolve(true);
     }, 2000),
   );
 export const FleetMapPage = async () => {
@@ -46,6 +48,11 @@ export const FleetMapPage = async () => {
           // transition: "1s",
         }}
       >
+        <AppIcon name="battery" />
+        <AppIcon name="battery" fontSize="large" />
+        <AppIcon name="battery" color={'warning'} />
+
+        <AppIcon name="pms" />
         <Slider />
         <Switch />
         {/* <ToggleButton></ToggleButton> */}

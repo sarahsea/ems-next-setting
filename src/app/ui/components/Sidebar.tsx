@@ -42,7 +42,6 @@ export type SidebarProps = {
   width?: number;
   selectedKey?: string; // 현재 선택된 key (leaf의 key 사용 권장)
   defaultOpenGroups?: string[]; // 처음 열어둘 group key 목록
-  variant?: 'permanent' | 'persistent' | 'temporary';
   open?: boolean;
   onClose?: () => void;
   header?: React.ReactNode;
@@ -56,8 +55,7 @@ export default function Sidebar({
   width = DEFAULT_WIDTH,
   selectedKey,
   defaultOpenGroups = [],
-  variant,
-  open = true,
+  open = false,
   onClose,
   header,
   showDividers = false,
@@ -70,21 +68,16 @@ export default function Sidebar({
     setOpenGroups((prev) => ({ ...prev, [key]: !prev[key] }));
   }, []);
 
-  // Use temporary variant for toggling sidebar, fallback to permanent if not provided
-  const drawerVariant = variant ?? 'temporary';
-
   return (
     <Drawer
-      variant={drawerVariant}
+      variant="persistent"
       open={open}
       onClose={onClose}
-      ModalProps={
-        drawerVariant === 'temporary'
-          ? { BackdropProps: { invisible: true } }
-          : undefined
-      }
+      ModalProps={{ BackdropProps: { invisible: true } }}
+      anchor="left"
+      elevation={0}
       sx={{
-        width,
+        width: open ? width : 0,
         flexShrink: 0,
         '& .MuiDrawer-paper': {
           width,
@@ -94,10 +87,10 @@ export default function Sidebar({
         },
       }}
     >
-      <Toolbar sx={{ minHeight: 64 }}>
+      {/* <Toolbar sx={{ minHeight: 64 }}>
         <Box sx={{ px: 2, width: '100%' }}>{header}</Box>
       </Toolbar>
-      <Divider />
+      <Divider /> */}
 
       <List component="nav" sx={{ px: 1, py: 0.5 }}>
         {menu.map((node, idx) => {

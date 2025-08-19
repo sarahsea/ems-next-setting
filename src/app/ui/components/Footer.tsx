@@ -1,7 +1,8 @@
 import React from 'react';
+import { Box } from '@mui/material';
 
 function Footer() {
-  return <div>Footer</div>;
+  return <Box>Footer</Box>;
 }
 
 export default Footer;

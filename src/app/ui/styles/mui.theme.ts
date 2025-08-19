@@ -69,7 +69,7 @@ const theme = createTheme({
         },
         background: {
           default: '#ffffff',
-          paper: '#f5f5f5ff',
+          paper: '#fefefeff',
         },
         action: {
           active: '#171717ff',

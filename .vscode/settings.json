@@ -11,8 +11,13 @@
     "**/node_modules/**": true,
     "**/.vscode/**": true
   },
-  "i18n-ally.localesPaths": [
-    "src/shared/i18n",
-    "src/shared/i18n/messages"
-  ]
+  "i18n-ally.localesPaths": ["src/shared/i18n", "src/shared/i18n/messages"],
+  "workbench.editorAssociations": {
+    "viewType": "default",
+    "filenamePattern": "*.svg"
+  }, // 미리보기 대신 텍스트 에디터로
+
+  "files.associations": {
+    "*.svg": "xml" // XML 하이라이팅/자동완성
+  }
 }

@@ -48,6 +48,7 @@ export default function WebSocketProvider({
       };
 
       ws.onmessage = (event) => {
+        console.log('event', event);
         // Example: integrate with react-query cache here
         // const msg = JSON.parse(event.data);
         // queryClient.setQueryData([...], updater)
