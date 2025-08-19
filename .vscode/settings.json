@@ -10,5 +10,9 @@
     "**/.git/**": true,
     "**/node_modules/**": true,
     "**/.vscode/**": true
-  }
+  },
+  "i18n-ally.localesPaths": [
+    "src/shared/i18n",
+    "src/shared/i18n/messages"
+  ]
 }

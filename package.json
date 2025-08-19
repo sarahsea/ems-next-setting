@@ -47,5 +47,6 @@
     "tz-lookup": "^6.1.25",
     "zod": "^4.0.17",
     "zustand": "^5.0.7"
-  }
+  },
+  "packageManager": "pnpm@10.11.0"
 }
