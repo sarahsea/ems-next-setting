@@ -13,7 +13,8 @@ import {
   Toolbar,
   Box,
 } from '@mui/material';
-import { ExpandLess, ExpandMore } from '@mui/icons-material';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export type MenuItemLeaf = {
   type: 'item'; // 바로 이동하는 메뉴
@@ -148,7 +149,7 @@ export default function Sidebar({
                   </ListItemIcon>
                 )}
                 <ListItemText primary={group.name} />
-                {isOpen ? <ExpandLess /> : <ExpandMore />}
+                {isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
               </ListItemButton>
 
               <Collapse in={isOpen} timeout="auto" unmountOnExit>
