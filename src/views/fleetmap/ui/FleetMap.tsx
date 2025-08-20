@@ -15,12 +15,12 @@ const dummyDelayForLoadingTest = async () =>
   new Promise((resolve) =>
     setTimeout(() => {
       resolve(true);
-    }, 500),
+    }, 2000),
   );
 export const FleetMapPage = async () => {
   // const t = await getTranslations('home');
   // const t = useTranslations('home');
-  // await dummyDelayForLoadingTest();
+  await dummyDelayForLoadingTest();
   return (
     <Box
       sx={{
