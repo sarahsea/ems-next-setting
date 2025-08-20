@@ -1,5 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl';
+
 import LangSelect from './LangSelect';
+
 import type { Locale } from '@/shared/i18n/config';
 
 export default function LocaleSwitcher() {

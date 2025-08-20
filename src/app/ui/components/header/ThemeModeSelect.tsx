@@ -1,10 +1,11 @@
 'use client';
 import { useState } from 'react';
+
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import SettingsBrightnessIcon from '@mui/icons-material/SettingsBrightness';
 import IconButton from '@mui/material/IconButton';
 import { useColorScheme } from '@mui/material/styles';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import SettingsBrightnessIcon from '@mui/icons-material/SettingsBrightness';
 
 type Mode = 'system' | 'light' | 'dark';
 

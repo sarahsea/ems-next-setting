@@ -1,11 +1,13 @@
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
-import { roboto } from '@/app/ui/styles/mui.theme';
+
 import { NextIntlClientProvider } from 'next-intl';
 import {
   getLocale,
   // getMessages
 } from 'next-intl/server';
+
 import AppProvider from '@/app/provider/AppProvider';
+import { roboto } from '@/app/ui/styles/mui.theme';
 
 import type { Metadata } from 'next';
 

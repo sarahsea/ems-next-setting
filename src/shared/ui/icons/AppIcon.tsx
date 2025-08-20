@@ -2,7 +2,9 @@
 
 import * as React from 'react';
 import { forwardRef } from 'react';
+
 import { SvgIcon, SvgIconProps } from '@mui/material';
+
 import { iconRegistry, IconName } from './registry';
 
 export type AppIconProps = Omit<SvgIconProps, 'component'> & {

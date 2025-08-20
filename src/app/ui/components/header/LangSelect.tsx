@@ -1,9 +1,11 @@
 'use client';
 import { useState, useTransition } from 'react';
+
+import LanguageIcon from '@mui/icons-material/Language';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import LanguageIcon from '@mui/icons-material/Language';
+
 import { Locale } from '@/shared/i18n/config';
 import { setUserLocaleAction } from '@/shared/i18n/setLocale';
 

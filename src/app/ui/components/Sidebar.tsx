@@ -1,7 +1,9 @@
 // Sidebar.tsx
 'use client';
 import * as React from 'react';
-import NextLink from 'next/link';
+
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {
   Drawer,
   List,
@@ -13,8 +15,7 @@ import {
   Toolbar,
   Box,
 } from '@mui/material';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import NextLink from 'next/link';
 
 export type MenuItemLeaf = {
   type: 'item'; // 바로 이동하는 메뉴

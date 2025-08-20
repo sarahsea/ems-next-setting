@@ -1,11 +1,12 @@
 'use client';
 import { useMemo, useState } from 'react';
-import TextField from '@mui/material/TextField';
+
+import { MapboxSearchBox } from '@mapbox/search-js';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
+import TextField from '@mui/material/TextField';
 
 // npm i @mapbox/search-js
-import { MapboxSearchBox } from '@mapbox/search-js';
 
 export default function AddressAutocomplete() {
   const [q, setQ] = useState('');

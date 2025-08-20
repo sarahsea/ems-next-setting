@@ -1,12 +1,14 @@
 import React from 'react';
+
+import MenuIcon from '@mui/icons-material/Menu';
 import { Box } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+
+import Clock from './Clock';
 import LocaleSwitcher from './LocaleSwitcher';
 import ThemeModeSelect from './ThemeModeSelect';
-import Clock from './Clock';
 
 function Header({ onToggleSidebar }: { onToggleSidebar?: () => void }) {
   return (

@@ -2,9 +2,10 @@
 import React from 'react';
 
 import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 import moment from 'moment-timezone';
+
 import { getTimezone } from '@/shared/lib/timezone/tz-lookup';
 
 dayjs.extend(utc);

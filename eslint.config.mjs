@@ -1,4 +1,4 @@
-import { dirname } from 'path';
+import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
@@ -91,7 +91,36 @@ const eslintConfig = [
     },
   },
   // =====================================================================
-  // prettier 충돌 방지
+  // import 정렬 규칙
+  // =====================================================================
+  {
+    rules: {
+      'import/order': [
+        'error',
+        {
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            ['parent', 'sibling', 'index'],
+            'object',
+            'type',
+          ],
+          pathGroups: [
+            { pattern: 'react', group: 'builtin', position: 'before' },
+          ],
+          pathGroupsExcludedImportTypes: ['react'],
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: false,
+          },
+          'newlines-between': 'always-and-inside-groups',
+        },
+      ],
+    },
+  },
+  // =====================================================================
+  // prettier 충돌 방지 (항상 마지막에 위치해야 함)
   // =====================================================================
   eslintPluginPrettierRecommended,
 ];

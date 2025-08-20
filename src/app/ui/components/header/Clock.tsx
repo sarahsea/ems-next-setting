@@ -1,7 +1,8 @@
 'use client';
+import { useEffect, useState } from 'react';
+
 import { Box, Typography } from '@mui/material';
 import dayjs from 'dayjs';
-import { useEffect, useState } from 'react';
 
 export default function Clock() {
   const [now, setNow] = useState(() => new Date());

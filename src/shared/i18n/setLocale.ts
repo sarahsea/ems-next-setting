@@ -1,5 +1,6 @@
 'use server';
 import { cookies } from 'next/headers';
+
 import { Locale, COOKIE_NAME } from '@/shared/i18n/config';
 
 export async function setUserLocaleAction(locale: Locale) {

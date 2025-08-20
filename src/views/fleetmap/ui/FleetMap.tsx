@@ -1,8 +1,11 @@
 // 'use client';
 import React from 'react';
+
+import { Button, Badge, Box, Slider, Stack, Switch } from '@mui/material';
+
 import SegmentedProgressBar from '@/shared/ui/components/SegmentedProgressbar';
 import AppIcon from '@/shared/ui/icons/AppIcon';
-import { Button, Badge, Box, Slider, Stack, Switch } from '@mui/material';
+
 import TestChangeLocale from './TestChangeLocale';
 
 // import { useTranslations } from 'next-intl';

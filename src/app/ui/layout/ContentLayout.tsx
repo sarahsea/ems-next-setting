@@ -1,9 +1,11 @@
 'use client';
+import { Suspense, useState } from 'react';
+
 import { Box } from '@mui/material';
-import Header from '@/app/ui/components/header/Header';
+
 import Footer from '@/app/ui/components/Footer';
 import Sidebar, { type MenuNode } from '@/app/ui/components/Sidebar';
-import { Suspense, useState } from 'react';
+import Header from '@/app/ui/components/header/Header';
 
 export default function ContentLayout({
   menu,
