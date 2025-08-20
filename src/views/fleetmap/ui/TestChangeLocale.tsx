@@ -2,11 +2,11 @@
 import { useTranslations } from 'next-intl';
 
 export default function TestChangeLocale() {
-  const t = useTranslations();
+  const t = useTranslations('shared');
   return (
     <div>
       <h1>Test Change Locale</h1>
-      <p>{t('home.title')}</p>
+      <p>{t('test')}</p>
     </div>
   );
 }

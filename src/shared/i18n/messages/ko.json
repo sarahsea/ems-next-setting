@@ -1,1 +1,8 @@
-{}
+{
+  "shared": {
+    "test": "테스트",
+    "empty_dd": "",
+    "locale_en": "English",
+    "locale_ko": "한국어"
+  }
+}

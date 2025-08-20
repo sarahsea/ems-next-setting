@@ -30,7 +30,7 @@ export default function LocaleSelect({ defaultValue, locales }: Props) {
 
   const handleMenuItemClick = (localeValue: Locale) => {
     startTransition(() => {
-      setUserLocaleAction(localeValue);
+      setUserLocale(localeValue);
       setValue(localeValue);
       setAnchorEl(null);
     });

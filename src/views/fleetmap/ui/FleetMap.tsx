@@ -19,7 +19,8 @@ const dummyDelayForLoadingTest = async () =>
   );
 export const FleetMapPage = async () => {
   // const t = await getTranslations('home');
-  // const t = useTranslations('home');
+  // const t = useTranslations('home', {save: });
+
   await dummyDelayForLoadingTest();
   return (
     <Box
