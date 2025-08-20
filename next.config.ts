@@ -1,7 +1,11 @@
 import createNextIntlPlugin from 'next-intl/plugin';
 import type { NextConfig } from 'next';
 
-const withNextIntl = createNextIntlPlugin('./src/shared/i18n/requests.ts');
+// i18n 설정
+const withNextIntl = createNextIntlPlugin(
+  './src/shared/i18n/setting/requests.ts',
+);
+
 const nextConfig: NextConfig = {
   // reactStrictMode: true, // 빌드 시 StrictMode 적용
   // swcMinify: true, // SWC로 코드 압축
@@ -27,7 +31,7 @@ const nextConfig: NextConfig = {
   // eslint: {
   //   dirs: ['src', 'app'], // 검사할 디렉토리
   // },
-  // TurboPack 설정
+  // TurboPack 설정 - svgr
   turbopack: {
     rules: {
       '*.svg': {

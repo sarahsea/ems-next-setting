@@ -1,6 +1,6 @@
 import { getRequestConfig } from 'next-intl/server';
 
-import { getUserLocale } from './getLocale';
+import { getUserLocale } from '../getLocale';
 
 export default getRequestConfig(async () => {
   // Provide a static locale, fetch a user setting,

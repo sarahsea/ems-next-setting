@@ -6,8 +6,8 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-import { Locale } from '@/shared/i18n/config';
-import { setUserLocaleAction } from '@/shared/i18n/setLocale';
+import { setUserLocale } from '@/shared/i18n';
+import { Locale } from '@/shared/i18n/setting/config';
 
 type Props = {
   defaultValue: Locale;
