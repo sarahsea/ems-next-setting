@@ -1,14 +1,5 @@
-import { getTranslations } from 'next-intl/server';
+import { Device } from '@/views/device';
 
-async function MonitoringDevice() {
-  const t = await getTranslations('home');
-  return (
-    <div>
-      MonitoringDevice
-      <div>test i18n</div>
-      <div> {t('title')}</div>
-    </div>
-  );
+export default function MonitoringDevice() {
+  return <Device />;
 }
-
-export default MonitoringDevice;

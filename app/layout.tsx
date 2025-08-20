@@ -1,10 +1,11 @@
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
 import { roboto } from '@/app/ui/styles/mui.theme';
 import { NextIntlClientProvider } from 'next-intl';
-import { getLocale } from 'next-intl/server';
+import {
+  getLocale,
+  // getMessages
+} from 'next-intl/server';
 import AppProvider from '@/app/provider/AppProvider';
-// import { cookies } from 'next/headers';
-// import { AppLocale, loadMessages } from '@/shared/i18n/loadMessages';
 
 import type { Metadata } from 'next';
 
@@ -22,15 +23,14 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const locale = await getLocale();
-  // const messages = await loadMessages(locale);
-  // const messages = (await import(`../../locales/${locale}.json`)).default;
+  // const messages = await getMessages();
   return (
     <html lang={locale} className={roboto.variable} suppressHydrationWarning>
       <body>
         <InitColorSchemeScript attribute=".mui-theme-%s" />
-        <NextIntlClientProvider>
-          <AppProvider>{children}</AppProvider>
-        </NextIntlClientProvider>
+        <AppProvider>
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        </AppProvider>
       </body>
     </html>
   );

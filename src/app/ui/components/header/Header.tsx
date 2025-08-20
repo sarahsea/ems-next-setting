@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import LocaleSwitcher from './LocaleSwitcher';
 import ThemeModeSelect from './ThemeModeSelect';
+import Clock from './Clock';
 
 function Header({ onToggleSidebar }: { onToggleSidebar?: () => void }) {
   return (
@@ -27,6 +28,7 @@ function Header({ onToggleSidebar }: { onToggleSidebar?: () => void }) {
           padding: '0 16px',
         }}
       >
+        {/* 사이드바 온/오프 버튼 */}
         <IconButton
           aria-label="toggle sidebar"
           onClick={onToggleSidebar}
@@ -34,7 +36,8 @@ function Header({ onToggleSidebar }: { onToggleSidebar?: () => void }) {
         >
           <MenuIcon />
         </IconButton>
-        헤더 영역
+
+        {/* 헤더 우측 */}
         <Box
           sx={{
             display: 'flex',
@@ -43,6 +46,7 @@ function Header({ onToggleSidebar }: { onToggleSidebar?: () => void }) {
             gap: 2,
           }}
         >
+          <Clock />
           <ThemeModeSelect />
           <LocaleSwitcher />
         </Box>

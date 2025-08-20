@@ -1,24 +1,23 @@
+// 'use client';
+import React from 'react';
 import SegmentedProgressBar from '@/shared/ui/components/SegmentedProgressbar';
 import AppIcon from '@/shared/ui/icons/AppIcon';
-import { Button } from '@mui/material';
-import Badge from '@mui/material/Badge';
-import Box from '@mui/material/Box';
-import Slider from '@mui/material/Slider';
-import Stack from '@mui/material/Stack';
-import Switch from '@mui/material/Switch';
-import App from 'next/dist/pages/_app';
-import { getTranslations } from 'next-intl/server';
-import React from 'react';
+import { Button, Badge, Box, Slider, Stack, Switch } from '@mui/material';
+import TestChangeLocale from './TestChangeLocale';
+
+// import { useTranslations } from 'next-intl';
+// import { getTranslations } from 'next-intl/server';
 
 const dummyDelayForLoadingTest = async () =>
   new Promise((resolve) =>
     setTimeout(() => {
       resolve(true);
-    }, 2000),
+    }, 500),
   );
 export const FleetMapPage = async () => {
-  const t = await getTranslations('home');
-  await dummyDelayForLoadingTest();
+  // const t = await getTranslations('home');
+  // const t = useTranslations('home');
+  // await dummyDelayForLoadingTest();
   return (
     <Box
       sx={{
@@ -31,7 +30,7 @@ export const FleetMapPage = async () => {
     >
       <h1>Fleet Map</h1>
       <p>This is the Fleet Map page.</p>
-      <p>{t('title')}</p>
+      <TestChangeLocale />
       {/* <ThemeModeSelect /> */}
 
       <Stack
